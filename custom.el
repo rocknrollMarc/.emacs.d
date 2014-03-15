@@ -5,7 +5,7 @@
 
 ;; For example, oh-my-emacs disables menu-bar-mode by default. If you want it
 ;; back, just put following code here.
-;(menu-bar-mode t)
+;;(menu-bar-mode t)
 
 ;;; You email address
 (setq user-mail-address "marc.bluemner@gmail.com")
@@ -67,16 +67,10 @@ inversion of gas-comment-region"
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-names-vector ["#262626" "#d70000" "#5f8700" "#af8700" "#0087ff" "#af005f" "#00afaf" "#626262"])
- '(background-color "#1c1c1c")
- '(background-mode dark)
- '(cursor-color "#808080")
- '(custom-safe-themes (quote ("4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" default)))
- '(foreground-color "#808080")
  '(send-mail-function (quote mailclient-send-it)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(sp-pair-overlay-face ((t (:inherit nil)))))

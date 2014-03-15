@@ -13,7 +13,6 @@
 ;; will not; however, if there's an error in other files loaded by init.el,
 ;; both "emacs" and "emacs --debug-init" will entering the debugger. I don't
 ;; know why.
-(require 'cl)
 (setq debug-on-error t)
 
 ;; believe me, you don't need menubar, toolbar nor scrollbar
@@ -42,7 +41,9 @@
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives
               '("marmalade" . "http://marmalade-repo.org/packages/"))
+
 (package-initialize)
+(package-refresh-contents)
 
 (add-to-list 'el-get-recipe-path "~/.emacs.d/ome-el-get-recipes")
 
@@ -71,15 +72,13 @@
                               (:network-server . "talk.google.com")
                               (:port . 5223)
                               (:connection-type . ssl))
+                            ("bluemner@chat.facebook.com"
+                             (:password . "meinefrau011280")
+                              (:network-server . "chat.facebook.com")
+                              (:port . 5222)
+                              (:connection-type . TLS))
                             ))
 
-(add-to-list 'load-path "~/.emacs.d/el-get/simple-rtm/lisp")
-(autoload 'simple-rtm-mode "simple-rtm" "Interactive mode for Remember The Milk" t)
-(simple-rtm-mode)
-(eval-after-load 'simple-rtm
-  '(progn
-     (display-simple-rtm-tasks-mode t)))
-; load up the ome
 
 ;; load up the ome
 (org-babel-load-file (expand-file-name "ome.org" ome-dir))
