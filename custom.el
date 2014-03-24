@@ -6,7 +6,7 @@
 ;; For example, oh-my-emacs disables menu-bar-mode by default. If you want it
 ;; back, just put following code here.
 ;;(menu-bar-mode t)
-
+(evil-mode -1)
 ;;; You email address
 (setq user-mail-address "marc.bluemner@gmail.com")
 
@@ -67,6 +67,9 @@ inversion of gas-comment-region"
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ns-right-alternate-modifier (quote none))
+ '(ns-right-command-modifier (quote none))
+ '(ns-right-control-modifier (quote none))
  '(send-mail-function (quote mailclient-send-it)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

@@ -1,0 +1,17 @@
+
+;; ----- smex-history -----
+(
+ helm-M-x
+ menu-bar-showhide-tool-bar-menu-customize-enable-left
+ cd
+ 5x5
+ ack
+ arp
+ dbx
+)
+
+;; ----- smex-data -----
+(
+ (menu-bar-showhide-tool-bar-menu-customize-enable-left . 1)
+ (helm-M-x . 3)
+)

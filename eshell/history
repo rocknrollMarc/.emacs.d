@@ -1,0 +1,45 @@
+ls
+ls
+..
+..
+..
+git clone https://github.com/elitenomad/angular_app.git
+open .
+..
+cd angular/google/
+git log
+git add .
+git commit -m "added gemfile, homeCOntroller, settingsCOntroller with templates"
+git push
+git add .
+git commit -m "selectMail directive"
+git push
+git checkout -b templates_beautifying
+git add .
+git commit -m "changed html to look nice with ng-bin-html-unsafe"
+git checkout master
+git merge templates_beautifying
+git push
+git checkout -b showReplyButtonFunction
+git add .
+git commit -m "hooked up buttons and layout"
+git checkout master
+git merge templates_beautifying
+git merge showReplyButtonFunction
+git push
+cd
+cd dev/
+ls
+mkdir ruby
+cd ruby
+cd ruby
+git clone git clone git://github.com/sinatra/sinatra-recipes.git
+git clone git://github.com/sinatra/sinatra-recipes.git
+cd sinatra-recipes/
+ls
+ls
+jirb
+jirb
+/bin/zsh
+/bin/zsh
+/bin/zsh

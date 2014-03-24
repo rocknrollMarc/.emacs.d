@@ -63,6 +63,15 @@
 (defvar ome-dir (file-name-directory (or load-file-name (buffer-file-name)))
   "oh-my-emacs home directory.")
 
+(add-to-list 'load-path "~/.emacs.d/el-get/angular-mode")
+(require 'angular-mode)
+
+(add-to-list 'load-path "~/.emacs.d/el-get/angularjs-mode")
+(require 'angular-html-mode)
+
+(add-to-list 'load-path "~/.emacs.d/el-get/angularjs-mode")
+(require 'angular-mode)
+
 (add-to-list 'load-path "~/.emacs.d/elpa/emacs-jabber")
 (require 'jabber)
 
@@ -72,11 +81,10 @@
                               (:network-server . "talk.google.com")
                               (:port . 5223)
                               (:connection-type . ssl))
-                            ("bluemner@chat.facebook.com"
+                            ("marc.bluemner@chat.facebook.com"
                              (:password . "meinefrau011280")
-                              (:network-server . "chat.facebook.com")
-                              (:port . 5222)
-                              (:connection-type . TLS))
+                             (:network-server . chat.facebook.com)
+                             (:connection-type . network))
                             ))
 
 
@@ -84,3 +92,4 @@
 (org-babel-load-file (expand-file-name "ome.org" ome-dir))
 
 ;;; init.el ends here
+(put 'scroll-left 'disabled nil)
